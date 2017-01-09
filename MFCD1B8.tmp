@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>PRO-TRACK</title>
+ 
+<link href="C:\Users\CLIENT\Desktop\main\staff.png" type="image/png" rel="index" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <style type="text/css">
+<!--
+ 
+
+#header
+{
+	position:absolute;
+	left:-3px;
+	width:1369px;
+	height:54px;
+	top: -2px;
+}
+#footer
+{
+	position:absolute;
+	left:-1px;
+	width:1367px;
+	height:35px;
+	top:627px;
+	background-color:#C0DCC0;
+	border-top:ridge;
+	
+}
+#apDiv1 {
+	position:absolute;
+	width:51px;
+	height:24px;
+	z-index:1;
+	left: 1167px;
+	top: 18px;
+}
+ 
+
+
+ 
+#apDiv3 {
+	position:absolute;
+	width:332px;
+	height:41px;
+	z-index:3;
+	left: 76px;
+	top: 7px;
+}
+
+ 
+
+
+
+#grllog {
+	position:absolute;
+	width:94px;
+	height:78px;
+	z-index:5;
+	left: 260px;
+	top: 58px;
+	cursor:pointer;
+	font-family:Geneva, Arial, Helvetica, sans-serif;
+	}
+#name {
+	position:absolute;
+	width:239px;
+	height:31px;
+	z-index:3;
+	left: 73px;
+	top: 8px;
+}
+#crew {
+	position:absolute;
+	width:46px;
+	height:37px;
+	z-index:4;
+	left: 455px;
+	top: 53px;
+}
+ 
+body {
+	background-color:#f0f0f1;
+}
+
+#ruler {
+	position:absolute;
+	width:432px;
+	height:31px;
+	z-index:8;
+	left: 437px;
+	top: 108px;
+}
+ hr
+ {
+  border: 0; 
+  height: 1px; 
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+
+ 
+ }
+ #hrr
+ {
+
+  border: 0; 
+  height: 1px; 
+  background-image: -webkit-linear-gradient(left,black,black, #f0f0f0);
+
+ 
+ }
+
+
+#ser
+{
+overflow:scroll;
+}
+#title {
+	position:absolute;
+	width:253px;
+	height:26px;
+	z-index:4;
+	left: 546px;
+	top: 57px;
+	letter-spacing:4px;
+	font-size:22px;
+}
+#apDiv2 {
+	position:absolute;
+	width:191px;
+	height:16px;
+	z-index:5;
+	left: 559px;
+	top: 74px;
+}
+#leftbar {
+	position:absolute;
+	width:452px;
+	height:529px;
+	z-index:6;
+	background-color:#FAFAFA;
+	left: 4px;
+	top: 101px;
+	overflow-y:scroll;
+}
+#rightbar {
+	position:absolute;
+	width:908px;
+	height:530px;
+	z-index:4;
+	left: 456px;
+	top: 99px;
+	background-color:#FAFAFA;
+}
+#lefttitle{
+	position:absolute;
+	width:286px;
+	height:31px;
+	z-index:7;
+	left: -8px;
+	top: 4px;
+	letter-spacing:4px;
+	font-size:22px;
+}
+#list {
+	position:absolute;
+	width:86px;
+	height:115px;
+	z-index:5;
+	left: 74px;
+	top: 112px;
+}
+#righttitle {
+	position:absolute;
+	width:328px;
+	height:49px;
+	z-index:1;
+	letter-spacing:4px;
+	font-size:22px;
+}
+ 
+-->
+  </style>
+</head>
+
+
+
+<body onload="put();">
+<div id="rightbar">
+  <div id="righttitle"><img src="user1.png" width="74" height="69" /> Student List</div>
+</div>
+
+ 
+<div class="container">
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col-sm-4" style="background-color:#2e363e;" id="header">
+      <p><span>
+          <img src="logo1.png" class="img-rounded" alt="Cinque Terre" width="49" height="41" vspace="7" >  </span> &nbsp;&nbsp;&nbsp;</p>
+      <div id="title">Group Allocation </div>
+      <div id="apDiv2">
+        <hr /></div>
+      <div id="leftbar">
+      <div id="lefttitle"> <img src="staff.png" width="70" height="41" />Staff List  
+        <div id="pos" style="position:absolute; left: -37px; width: 343px; top: 22px;"> 
+          <hr id="hrr"  /></div> 
+         
+       	  </div>
+     
+                        <div class="form-group">
+					
+							<input id="nam" type="email" style="position:absolute; width:184px; top:55px;" class="form-control" placeholder="Enter Staff Name" >
+                            <input id="ema" type="text" style="position:absolute; width:184px; top:55px; left:189px;" class="form-control" placeholder="Enter Staff Email" >
+						</div>
+          <div class="form-group">
+			<button id="b" type="submit" class="btn btn-info btn-block" style="position:absolute; width:50px; top:55px;left:376px;">Add</button>
+						    <div id="list"><p>jsp</p></div>
+                        </div>
+                        
+
+
+       </div> 
+        
+      </div> 
+    </div>
+  </div>
+
+  
+</div>
+ 
+</div>
+
+<div class="col-sm-4"  id="footer"></div>
+<div id="name"><font style=" letter-spacing:9px; color:#d7dfe2; font-size:23px;">Pro-Track</font></div>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<script>
+$(document).ready(function() {
+	$.ajax({
+		type: "POST",
+		url: 'Servlet2',
+		success: function (res) {
+	  			$("#list").html(res);
+		},
+		
+});
+		
+});
+$(document).ready(function() {
+	$("#button").click(function() {	
+		
+		var name=$("#nam").val();
+		var email=$("#ema").val();
+		$.ajax({
+			type: "POST",
+			url: 'Servlet1',
+			data:{"name":name,"email":email},
+			success: function (res) {
+				$("#nam").val('');
+				$("#ema").val('');
+				var val=res.split("$");
+				 $("#mess").css("visibility","visible");
+		 			$("#mess").fadeIn(1000);
+				    $("#mess").val(val[0]);
+		  			$("#mess").fadeOut(1000);
+		  			$("#list").html(val[1]);
+		  			
+			 
+			},
+			
+    });
+		
+
+	});
+});
+
+ 
+ 
+
+
+</script>

@@ -1,0 +1,220 @@
+   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>PRO-TRACK</title>
+ 
+<link href="live.png" type="image/png" rel="stureg" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <style type="text/css">
+<!--
+ #name {
+	position:absolute;
+	width:239px;
+	height:31px;
+	z-index:3;
+	left: 73px;
+	top: 8px;
+}
+
+#header
+{
+	position:absolute;
+	left:-3px;
+	width:1369px;
+	height:54px;
+	top: -2px;
+}
+#footer
+{
+	position:absolute;
+	left:-1px;
+	width:1367px;
+	height:35px;
+	top:627px;
+	background-color:#C0DCC0;
+	border-top:ridge;
+	
+}
+#apDiv1 {
+	position:absolute;
+	width:51px;
+	height:24px;
+	z-index:1;
+	left: 1167px;
+	top: 18px;
+	
+}
+ 
+
+
+#apDiv3 {
+	position:absolute;
+	width:332px;
+	height:41px;
+	z-index:3;
+	left: 76px;
+	top: 7px;
+}
+ 
+
+
+
+ 
+
+
+ 
+body {
+	background-color:#f0f0f1;
+}
+
+ hr
+ {
+  border: 0; 
+  height: 1px; 
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+
+ 
+ }
+
+.container {
+ max-width: 360px;
+     height:13px;
+
+ }
+
+.divider {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.divider hr {
+  margin: 7px 0px;
+  width: 35%;
+}
+
+.left { float: left; }
+
+.right { float: right; }
+
+#mess {
+	position:absolute;
+	width:364px;
+	height:40px;
+	z-index:4;
+	left: 505px;
+	top: -2px;
+	background-color:#99CCCC;
+	border-radius:5px;
+	border:none;
+	visibility:hidden;
+	 
+	 
+}
+  </style>
+
+-->
+  </style>
+</head>
+
+<script src="indexjs.js">
+
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <script>
+ 
+
+ $(document).ready(function() 
+ {
+  	 
+ 			 
+	$("#b").click(function()
+	 {	 
+	        $("#mess").css("visibility","visible");
+ 			$("#mess").fadeIn("9000");
+			 $("#mess").val("Inserted");
+  			$("#mess").fadeOut("9000");
+
+			
+			
+		
+		});
+	});
+
+ 
+ </script>
+
+<body>
+
+<div class="container">
+<div class="row">
+			<div class="panel panel-primary">
+				<div class="panel-body">
+			
+						<div class="form-group">
+							<h2>Register here!!</h2> 
+ 						</div>
+                        <div class="form-group">
+							<label class="control-label" for="signupEmail">Register No.</label>
+							<input id="signupEmail" type="email" maxlength="50" class="form-control" placeholder="ex:211414621002" >
+						</div>
+                        <div class="form-group">
+							<label class="control-label" for="signupName">Your name</label>
+							<input id="signupName" type="text" maxlength="50" class="form-control" >
+						</div>
+						<div class="form-group">
+							<label class="control-label" for="signupEmail">Email</label>
+							<input id="signupEmail" type="email" maxlength="50" class="form-control">
+						</div>
+						<div class="form-group">
+							<label class="control-label" for="signupEmailagain">Mobile No.</label>
+							<input id="signupMobile" type="email" maxlength="50" class="form-control">
+						</div>
+						<div class="form-group">
+							<label class="control-label" for="signupPassword">Project Title</label>
+							<input id="signupTitle" type="text" maxlength="25" class="form-control" p length="40">
+						</div>
+						<div class="form-group">
+							<label class="control-label" for="signupPasswordagain">Domain name</label>
+							<input id="signupDomain" type="text" maxlength="25" placeholder="ex:cloud,big-data etc.." class="form-control">
+						</div>
+						<div class="form-group">
+							<button id="b" type="submit" class="btn btn-info btn-block">Submit</button>
+						</div>
+						
+						<hr>
+				
+				</div>
+			</div>
+		</div>
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col-sm-4" style="background-color:#2e363e;" id="header">
+      <p><span>
+          </span></p>
+      <input type="text" id="mess" disabled/>
+      <p><span><img src="logo1.png" class="img-rounded" alt="Cinque Terre" width="49" height="41" vspace="1" >  </span> &nbsp;&nbsp;&nbsp;></p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="col-sm-4"  id="footer"></div>
+<div id="name"><font style=" letter-spacing:9px; color:#d7dfe2; font-size:23px;">Pro-Track</font></div>
+
+
+
+
+
+
+</body>
+</html>
