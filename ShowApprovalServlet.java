@@ -16,8 +16,7 @@ import javax.jdo.PersistenceManager;
 import javax.jdo.Query;
 import java.util.*;
 
-
-public class DeleteApproval extends HttpServlet 
+public class ShowApprovalServlet extends HttpServlet 
 {
  
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
@@ -32,14 +31,23 @@ public class DeleteApproval extends HttpServlet
 		try
 		{
 		   pm.makePersistent(st);
-	       q.setFilter("id == '" + roll + "'");
-	       List<Student_Basic> temp = null;
-	   	    temp = (List<Student_Basic>) q.execute(roll);
-	   	 List<Student_Basic> abs=(List<Student_Basic>)temp;
-	      	for(Student_Basic c:abs )
-		    {
-		    out.println(c.getAbstract());
-		    }
+		   List<Student_Basic> results1 = null;
+		   results1 = (List<Student_Basic>) q.execute();
+			List<Student_Basic> bb =(List<Student_Basic>)results1;
+			for(Student_Basic b:bb )
+			{
+				if(b.getGuide()!=null&&b.getId()!=null)
+				{
+				    out.print(b.getId());
+			        out.print("$");
+			        out.print(b.getGuide());
+			        out.print("$");
+					
+				
+				}
+				
+				
+		     }
 	   	  
 	   	    
       

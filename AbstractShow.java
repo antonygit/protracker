@@ -1,15 +1,21 @@
-package com.java.allocation;
+package com.college.project;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
+import javax.jdo.PersistenceManager;
+import javax.jdo.Query;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import java.io.*;
-import java.sql.*;
+import javax.jdo.PersistenceManager;
+import javax.jdo.Query;
+import java.util.*;
+
 
 public class AbstractShow extends HttpServlet 
 {
@@ -20,30 +26,39 @@ public class AbstractShow extends HttpServlet
 				
 		response.setContentType("text/html");  
 		PrintWriter out = response.getWriter();    
-		try{  
-		Class.forName("com.mysql.jdbc.Driver");  
-		Connection con=DriverManager.getConnection(  
-		"jdbc:mysql://localhost:3306/ajax","root","123456"); 
-		
-		
-		PreparedStatement stm=con.prepareStatement("select * from student_basic");
-		ResultSet rs=stm.executeQuery();
-		while(rs.next())
+		Student_Basic st=new Student_Basic();
+        PersistenceManager pm = PMF.get().getPersistenceManager();
+        Query q = pm.newQuery(Student_Basic.class);
+		try
 		{
-			String temp=rs.getString(1);
-			if(temp.equals(roll))
-			{
-	        out.print(rs.getString(6));		
-			break;
-		   }
+		   pm.makePersistent(st);
+	       q.setFilter("id == '" + roll + "'");
+	       List<Student_Basic> temp = null;
+	   	    temp = (List<Student_Basic>) q.execute(roll);
+	   	 List<Student_Basic> abs=(List<Student_Basic>)temp;
+	      	for(Student_Basic c:abs )
+		    {
+		    out.println(c.getAbstract());
+		    }
+	   	  
+	   	    
+      
 		}
-		}
+		
 		catch(Exception e)
 		{
+			
 			System.out.println(e);
 			
 		}
-		out.close(); 
+		finally
+		{
+			q.closeAll();
+			pm.close();
+			out.close(); 
+
+			
+		}
 		 
 	 
 	}
